@@ -1,27 +1,17 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#00a884"><title>ConnectChat</title>
-<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
-</head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#00a884"><title>ConnectChat</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"></head><body>
 <div class="app">
-<aside id="sidebar">
-<header class="topbar"><div class="brand"><div class="brand-icon">C</div><strong>ConnectChat</strong></div><div class="top-actions"><button title="New chat" id="newChat">＋</button><button title="Menu" id="menuBtn">⋮</button></div></header>
-<div class="search"><span>⌕</span><input id="search" placeholder="Search or start new chat" autocomplete="off"></div>
-<div class="filters"><button data-f="all" class="active">All</button><button data-f="unread">Unread</button><button data-f="fav">Favorites</button></div>
-<div id="list" class="chat-list"></div>
-<footer class="side-footer"><span>🔒 Your chats are stored on this device</span></footer>
+<aside id="home">
+<header class="home-head"><h1>ConnectChat</h1><div class="head-icons"><button id="camera">⌾</button><button id="newChat">＋</button><button id="menu">⋮</button></div></header>
+<div class="search"><span>⌕</span><input id="search" placeholder="Search" autocomplete="off"></div>
+<div class="filter-row"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="unread">Unread</button><button class="filter" data-filter="favs">Favorites</button></div>
+<div id="tabContent" class="tab-content"></div>
+<nav class="bottom-nav"><button class="nav active" data-tab="chats"><span>💬</span><b>Chats</b></button><button class="nav" data-tab="updates"><span>◉</span><b>Updates</b></button><button class="nav" data-tab="communities"><span>⌘</span><b>Communities</b></button><button class="nav" data-tab="calls"><span>☎</span><b>Calls</b></button></nav>
 </aside>
 <main id="main">
-<div id="empty" class="empty"><div class="empty-art">💬</div><h2>ConnectChat</h2><p>Private messaging, redesigned.</p><small>Select a chat to start messaging</small></div>
-<section id="chat" class="chat hidden">
-<header class="chat-head"><button id="back" class="icon-btn mobile-only">‹</button><div id="avatar" class="avatar"></div><div class="contact"><strong id="name"></strong><small id="status"></small></div><span class="grow"></span><button class="icon-btn" title="Search messages">⌕</button><button class="icon-btn" title="More" id="chatMenu">⋮</button></header>
-<div id="banner" class="secure-banner">🔒 Messages are end-to-end style demo messages stored locally.</div>
-<div id="messages" class="messages"></div>
+<div id="empty" class="empty"><div class="lock">🔒</div><h2>ConnectChat</h2><p>Private messaging, redesigned.</p><small>Choose a chat to start messaging</small></div>
+<section id="conversation" class="conversation hidden">
+<header class="chat-head"><button id="back" class="back">‹</button><div id="avatar" class="avatar"></div><div class="contact"><strong id="name"></strong><small id="status"></small></div><div class="grow"></div><button id="video">▣</button><button id="call">☎</button><button id="chatMenu">⋮</button></header>
+<div class="secure">🔒 Messages are stored locally in this demo.</div><div id="messages" class="messages"></div>
 <div id="emojiBar" class="emoji-bar hidden">😀 😂 😍 😎 👍 ❤️ 🎉 🔥 😢 🙏</div>
-<form id="form" class="composer"><button type="button" id="emoji" class="composer-btn">☺</button><input id="input" placeholder="Type a message" autocomplete="off"><button type="button" id="attach" class="composer-btn">＋</button><button class="send" aria-label="Send">➤</button></form>
-</section>
-</main>
-</div>
-<div id="toast" class="toast"></div>
-<script src="app.js"></script></body></html>
+<form id="composer"><button type="button" id="emoji">☺</button><button type="button" id="attach">＋</button><input id="input" placeholder="Message" autocomplete="off"><button class="send">➤</button></form>
+</section></main></div><div id="toast" class="toast"></div><script src="app.js"></script></body></html>
